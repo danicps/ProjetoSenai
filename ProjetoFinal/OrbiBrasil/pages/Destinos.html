@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrbiBrasil - Explore Destinos</title>
+  <!-- Fonts e Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/Destinos.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="../images/Logo.png" alt="OrbiBrasil" style="width: 60px; margin-right: 10px;">
+        <span style="font-size: 1.8rem; font-family: 'Playfair Display', serif;">OrbiBrasil</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Destinos.html">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="EscolhaOSeu.html">Escolha o Seu</a></li>
+          <li class="nav-item"><a class="nav-link" href="MinhasViagens.html">Minhas Viagens</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="position-relative vh-100">
+    <video autoplay muted loop class="w-100 h-100 object-fit-cover">
+      <source src="../media/bannerVideo.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content text-center text-white position-absolute top-50 start-50 translate-middle">
+      <h1 class="display-4 mb-3">Descubra o Brasil com Facilidade</h1>
+      <p class="lead mb-4">Planeje suas viagens com as melhores dicas, descontos e tranquilidade.</p>
+      <a href="./EscolhaOSeu.html" class="btn btn-lg btn-warning text-dark rounded-pill shadow">Saiba Mais</a>
+    </div>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="text-primary mb-4" style="font-family: 'Playfair Display', serif;">O que Fazemos</h2>
+      <p class="lead mx-auto mb-5" style="max-width: 800px;">
+        Ajudamos você a planejar a viagem perfeita pelo Brasil. Somos seu guia completo para explorar o país com tranquilidade e confiança.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card text-center p-4 shadow-sm h-100">
+            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+            <h3 class="h5">Destinos Incríveis</h3>
+            <p>Descubra os lugares mais bonitos e imperdíveis para visitar no Brasil.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card text-center p-4 shadow-sm h-100">
+            <i class="fas fa-hotel fa-3x text-primary mb-3"></i>
+            <h3 class="h5">Hospedagens Ideais</h3>
+            <p>Encontre as melhores opções de hotéis, pousadas e acomodações.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card text-center p-4 shadow-sm h-100">
+            <i class="fas fa-cloud-sun fa-3x text-primary mb-3"></i>
+            <h3 class="h5">Previsão do Tempo</h3>
+            <p>Saiba a previsão do tempo para programar sua viagem com segurança.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="descubraDestinos" class="py-5 text-white position-relative" style="background: url('../images/imagem2.png') no-repeat center center/cover;">
+    <div class="overlay-dark"></div>
+    <div class="container position-relative">
+      <h2 class="text-center mb-5" style="font-family: 'Playfair Display', serif;">Descubra 10 Destinos pelo Brasil</h2>
+    </div>
+        <!-- Jalapão -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/jalapao.jpg" class="card-img-top" alt="Jalapão">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jalapão - TO</h5>
+              <p class="card-text">Paisagens incríveis de fervedouros e dunas douradas no coração do Tocantins.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bonito -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/bonito.jpg" class="card-img-top" alt="Bonito">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bonito - MS</h5>
+              <p class="card-text">Mergulhe em rios cristalinos e explore cavernas deslumbrantes.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Canela -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/canela.jpg" class="card-img-top" alt="Canela">
+            <div class="card-body text-center">
+              <h5 class="card-title">Canela - RS</h5>
+              <p class="card-text">Cidades encantadoras e a famosa Catedral de Pedra esperam por você.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Foz do Iguaçu -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/fozdoiguacu.jpg" class="card-img-top" alt="Foz do Iguaçu">
+            <div class="card-body text-center">
+              <h5 class="card-title">Foz do Iguaçu - PR</h5>
+              <p class="card-text">Visite as imponentes Cataratas do Iguaçu, uma das 7 maravilhas da natureza.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Porto de Galinhas -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/portodegalinhas.jpg" class="card-img-top" alt="Porto de Galinhas">
+            <div class="card-body text-center">
+              <h5 class="card-title">Porto de Galinhas - PE</h5>
+              <p class="card-text">Piscinas naturais paradisíacas para relaxar e aproveitar o sol.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Jericoacoara -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/jericoacoara.jpg" class="card-img-top" alt="Jericoacoara">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jericoacoara - CE</h5>
+              <p class="card-text">Pôr do sol mágico e lagoas cristalinas na charmosa Jeri.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Campos do Jordão -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/camposdojordao.jpg" class="card-img-top" alt="Campos do Jordão">
+            <div class="card-body text-center">
+              <h5 class="card-title">Campos do Jordão - SP</h5>
+              <p class="card-text">Clima europeu e arquitetura encantadora na serra paulista.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Lençóis Maranhenses -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/lencois.jpg" class="card-img-top" alt="Lençóis Maranhenses">
+            <div class="card-body text-center">
+              <h5 class="card-title">Lençóis Maranhenses - MA</h5>
+              <p class="card-text">Dunas de areia branca e lagoas azuis de tirar o fôlego.</p>
+            </div>
+          </div>
+        </div>
+        <!-- São Miguel dos Milagres -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/saomiguel.jpg" class="card-img-top" alt="São Miguel dos Milagres">
+            <div class="card-body text-center">
+              <h5 class="card-title">São Miguel dos Milagres - AL</h5>
+              <p class="card-text">Praias tranquilas e águas mornas esperam por você.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Fernando de Noronha -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="../images/noronha.jpg" class="card-img-top" alt="Fernando de Noronha">
+            <div class="card-body text-center">
+              <h5 class="card-title">Fernando de Noronha - PE</h5>
+              <p class="card-text">Paraíso de águas transparentes e vida marinha exuberante.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-3 text-center">
+    <p class="mb-0">&copy; 2024 OrbiBrasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

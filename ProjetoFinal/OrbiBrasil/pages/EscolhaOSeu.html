@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrbiBrasil - Planeje Sua Viagem</title>
+  <!-- Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/EscolhaOseu.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">OrbiBrasil</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Escolha Seu Destino</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header-image">
+    <div class="overlay"></div>
+    <div class="header-content text-white">
+      <h1 class="display-4 fw-bold">Planeje Sua Viagem</h1>
+      <p class="lead">Escolha o destino ideal e veja todas as opções para sua viagem perfeita!</p>
+    </div>
+  </header>
+
+  <!-- Escolha seu Destino -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">Escolha o Destino e Orçamento</h2>
+      <form id="travelForm" class="row justify-content-center mb-5">
+        <div class="col-md-4 mb-3">
+          <label for="destination" class="form-label">Escolha o destino</label>
+          <select id="destination" class="form-select form-control-lg" required>
+            <option value="" disabled selected>Selecione um destino...</option>
+            <option value="rio">Rio de Janeiro</option>
+            <option value="salvador">Salvador</option>
+            <option value="florianopolis">Florianópolis</option>
+          </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="budget" class="form-label">Orçamento (R$)</label>
+          <select id="budget" class="form-select form-control-lg" required>
+            <option value="" disabled selected>Selecione o orçamento...</option>
+            <option value="baixo">Econômico</option>
+            <option value="medio">Intermediário</option>
+            <option value="alto">Luxo</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary btn-lg mt-4 w-100" onclick="showDetails()">Buscar</button>
+        </div>
+      </form>
+
+      <!-- Resultados -->
+      <div id="results" class="destination-details row justify-content-center"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-3 text-center">
+    <p class="mb-0">&copy; 2024 OrbiBrasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/EscolhaOSeu.js"></script>
+</body>
+
+</html>
