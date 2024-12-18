@@ -1,83 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OrbiBrasil - Planeje Sua Viagem</title>
-  <!-- Estilos -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../styles/EscolhaOseu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Destino - Planeje sua Viagem</title>
+    <link rel="stylesheet" href="../styles/EscolhaOseu.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">OrbiBrasil</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Escolha Seu Destino</a></li>
-        </ul>
-      </div>
+
+<header>
+    <h1>Escolha seu Destino</h1>
+    <p>Planeje sua viagem pelo Brasil de forma prática e personalizada</p>
+</header>
+
+<div class="container">
+    <form id="travelForm">
+        <h2>Detalhes da Viagem</h2>
+        
+        <!-- Destino -->
+        <label for="destination">Destino</label>
+        <select id="destination" name="destination">
+            <option value="jalapao">Jalapão</option>
+            <option value="bonito">Bonito</option>
+            <option value="canela">Canela</option>
+            <option value="foz-do-iguacu">Foz do Iguaçu</option>
+            <option value="porto-de-galinhas">Porto de Galinhas</option>
+            <option value="jericoacoara">Jericoacoara</option>
+            <option value="campos-do-jordao">Campos do Jordão</option>
+            <option value="lencois-maranhenses">Lençóis Maranhenses</option>
+            <option value="sao-miguel-dos-milagres">São Miguel dos Milagres</option>
+            <option value="fernando-de-noronha">Fernando de Noronha</option>
+        </select>
+
+        <!-- Orçamento -->
+        <label for="budget">Orçamento (R$)</label>
+        <input type="number" id="budget" name="budget" placeholder="Ex: 3000">
+
+        <!-- Data -->
+        <label for="travelDate">Data da Viagem</label>
+        <input type="date" id="travelDate" name="travelDate">
+
+        <!-- Opção de hotéis -->
+        <label for="hotelSort">Ordenação de Hotéis</label>
+        <select id="hotelSort" name="hotelSort">
+            <option value="cheap-to-expensive">Mais baratos para mais caros</option>
+            <option value="expensive-to-cheap">Mais caros para mais baratos</option>
+        </select>
+
+        <button type="submit">Planejar Viagem</button>
+    </form>
+
+    <!-- Resultados -->
+    <div id="results" class="results" style="display: none;">
+        <h2>Resumo do Planejamento</h2>
+        <p><strong>Destino:</strong> <span id="resultDestination"></span></p>
+        <p><strong>Orçamento:</strong> R$ <span id="resultBudget"></span></p>
+        <p><strong>Data da Viagem:</strong> <span id="resultDate"></span></p>
+        <p><strong>Ordenação de Hotéis:</strong> <span id="resultHotelSort"></span></p>
+        <p><strong>Locais Indispensáveis:</strong></p>
+        <ul id="resultMustVisit"></ul>
+        <p><strong>Previsão do Tempo:</strong> <span id="resultWeather"></span></p>
+        <p><strong>Valor Estimado Total:</strong> R$ <span id="resultTotalCost"></span></p>
     </div>
-  </nav>
+</div>
 
-  <!-- Header -->
-  <header class="header-image">
-    <div class="overlay"></div>
-    <div class="header-content text-white">
-      <h1 class="display-4 fw-bold">Planeje Sua Viagem</h1>
-      <p class="lead">Escolha o destino ideal e veja todas as opções para sua viagem perfeita!</p>
-    </div>
-  </header>
-
-  <!-- Escolha seu Destino -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center text-primary mb-4">Escolha o Destino e Orçamento</h2>
-      <form id="travelForm" class="row justify-content-center mb-5">
-        <div class="col-md-4 mb-3">
-          <label for="destination" class="form-label">Escolha o destino</label>
-          <select id="destination" class="form-select form-control-lg" required>
-            <option value="" disabled selected>Selecione um destino...</option>
-            <option value="rio">Rio de Janeiro</option>
-            <option value="salvador">Salvador</option>
-            <option value="florianopolis">Florianópolis</option>
-          </select>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="budget" class="form-label">Orçamento (R$)</label>
-          <select id="budget" class="form-select form-control-lg" required>
-            <option value="" disabled selected>Selecione o orçamento...</option>
-            <option value="baixo">Econômico</option>
-            <option value="medio">Intermediário</option>
-            <option value="alto">Luxo</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <button type="button" class="btn btn-primary btn-lg mt-4 w-100" onclick="showDetails()">Buscar</button>
-        </div>
-      </form>
-
-      <!-- Resultados -->
-      <div id="results" class="destination-details row justify-content-center"></div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-primary text-white py-3 text-center">
-    <p class="mb-0">&copy; 2024 OrbiBrasil. Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="../scripts/EscolhaOSeu.js"></script>
+<script src="../scripts/EscolhaOSeu.js"></script>
 </body>
-
 </html>
