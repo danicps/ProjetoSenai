@@ -1,11 +1,16 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
-  background-color: #f8f9fa;
 }
 
 header .overlay {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -13,14 +18,18 @@ header .overlay {
   height: 100%;
 }
 
-header h1,
-header p {
-  animation: fadeInUp 1.5s ease-in-out;
+header img {
+  object-fit: cover;
 }
 
 .card img {
   object-fit: cover;
   height: 200px;
+  width: 100%;
+}
+
+.card {
+  overflow: hidden;
 }
 
 .feature-card {
@@ -32,23 +41,49 @@ header p {
   transform: translateY(-10px);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+#navbar {
+  background-color: #333; /* Altere a cor aqui */
+}
+
+#footer {
+  background-color: #444; /* Altere a cor aqui */
+}
+
+@media (max-width: 768px) {
+  header .content {
+    padding: 0 20px;
   }
 }
 
-.overlay-dark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+
+/* Ajuste da logo no navbar */
+.logo {
+  width: 100px; /* Aumente ou diminua o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  transition: transform 0.3s ease-in-out; /* Suaviza qualquer alteração de tamanho */
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre a logo e o texto */
+}
+
+.navbar {
+  height: auto; /* Garante que o tamanho da navbar seja ajustado automaticamente */
+  padding: 0.5rem 1rem; /* Controle o espaçamento interno */
+
+}
+
+.navbar-toggler {
+  margin-top: 2px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.logo:hover {
+  transform: scale(1.1); 
+}

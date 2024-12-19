@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2, h5 {
-    color: #0077b6;
+    color: black;
 }
 
 p {
@@ -88,7 +88,7 @@ h2 {
 .card-title {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #0077b6;
+    color: black;
 }
 
 .card-text {
@@ -98,7 +98,7 @@ h2 {
 }
 
 .btn-primary {
-    background-color: #0077b6;
+    background-color: black;
     border: none;
     padding: 10px 15px;
     font-size: 1rem;
@@ -108,7 +108,7 @@ h2 {
 }
 
 .btn-primary:hover {
-    background-color: #005f87;
+    background-color: black;
 }
 
 /* Footer */
@@ -125,3 +125,33 @@ footer p {
     font-size: 1rem;
     color: #777;
 }
+.logo {
+    width: 100px; 
+    height: auto; 
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .navbar {
+    height: auto; 
+    padding: 0.5rem 1rem; 
+  
+  }
+  
+  .navbar-toggler {
+    margin-top: 2px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1); 
+  }

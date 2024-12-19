@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descontos Exclusivos - Planeje sua Viagem</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/Promocoes.css">
-</head>
-<body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">OrbiBrasil</a>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="Destinos.html">Destinos</a></li>
-        <li class="nav-item"><a class="nav-link" href="EscolhaOSeu.html">Escolha o Seu Destino</a></li>
-        <li class="nav-item"><a class="nav-link" href="Promocoes.html">Promoções</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrbiBrasil - Explore Destinos</title>
+  <!-- Fonts e Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/Promocoes.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../images/Logo.png" alt="OrbiBrasil" class="logo">
+      <span style="font-size: 1.8rem; font-family: 'Playfair Display', serif;">OrbiBrasil</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Destinos.html">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="EscolhaOSeu.html">Escolha o Seu Destino</a></li>
+          <li class="nav-item"><a class="nav-link" href="Promocoes.html">Promoções</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
+
 <!-- Banner -->
 <header>
     <div id="promoBanner" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../images/imagem1.png" class="d-block w-100" alt="Promoção Viagens">
+                <img src="../images/banner2.png" class="d-block w-100" alt="Promoção Viagens">
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Descontos Imperdíveis!</h2>
                     <p>Parcerias exclusivas com as melhores marcas para sua viagem.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Promoção Beach Park">
+                <img src="../images/Frame 2.png" class="d-block w-100" alt="Promoção Beach Park">
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Aventura no Beach Park</h2>
                     <p>Aproveite descontos especiais no parque aquático mais famoso do Brasil.</p>
@@ -71,8 +84,8 @@
             <div class="card">
                 <img src="../images/gol.jpg" class="card-img-top" alt="GOL Promoção">
                 <div class="card-body">
-                    <h5 class="card-title">GOL - Ofertas Especiais</h5>
-                    <p class="card-text">Descubra descontos exclusivos nas suas viagens com a GOL Linhas Aéreas.</p>
+                    <h5 class="card-title">GOL - Ofertas Especiais em até 10x sem juros</h5>
+                    <p class="card-text">Descubra descontos exclusivos nas suas viagens com a GOL Linhas Aéreas em até 10x sem juros!</p>
                     <a href="https://www.voegol.com.br/" target="_blank" class="btn btn-primary">Aproveitar</a>
                 </div>
             </div>
@@ -84,8 +97,8 @@
           <div class="card">
               <img src="../images/booking.png" class="card-img-top" alt="HOTEL Promoção">
               <div class="card-body">
-                  <h5 class="card-title">Booking - Ofertas Especiais</h5>
-                  <p class="card-text">Encontre a estadia ideal mais rápido.</p>
+                  <h5 class="card-title">Booking - Ofertas Especiais 70% OFF</h5>
+                  <p class="card-text">Encontre a estadia ideal mais rápido, com 70% de desconto, corre!</p>
                   <a href="https://www.booking.com/" target="_blank" class="btn btn-primary">Aproveitar</a>
               </div>
           </div>
@@ -96,8 +109,8 @@
         <div class="card">
             <img src="../images/Unidas.png" class="card-img-top" alt="CARRO Promoção">
             <div class="card-body">
-                <h5 class="card-title">Unidas - Ofertas Especiais para suas férias</h5>
-                <p class="card-text">Dicas, promoções e ofertas exclusivas da Unidas Aluguel de Carros .</p>
+                <h5 class="card-title">Unidas - Ofertas Especiais para suas férias 20% na primeira compra</h5>
+                <p class="card-text">Dicas, promoções e ofertas exclusivas da Unidas Aluguel de Carros, com até 20% de desconto no primeiro aluguel.</p>
                 <a href="https://www.unidas.com.br/" target="_blank" class="btn btn-primary">Aproveitar</a>
             </div>
         </div>
@@ -108,8 +121,8 @@
       <div class="card">
           <img src="../images/peixe.jpg" class="card-img-top" alt="ALIMENTACAO Promoção">
           <div class="card-body">
-              <h5 class="card-title">Peixe na Telha - Ofertas Especiais</h5>
-              <p class="card-text">Descubra a melhor gastronomia da região com preços exclusivos.</p>
+              <h5 class="card-title">Peixe na Telha - Ofertas Especiais 50% no segundo!</h5>
+              <p class="card-text">Descubra a melhor gastronomia da região com preços exclusivos. Na primera compra, ganhe o segundo prato com 50% de desconto!</p>
               <a href="https://www.peixenatelha.com.br/" target="_blank" class="btn btn-primary">Aproveitar</a>
           </div>
       </div>
@@ -120,8 +133,8 @@
             <div class="card">
                 <img src="../images/park.jpeg" class="card-img-top" alt="Beach Park Promoção">
                 <div class="card-body">
-                    <h5 class="card-title">Beach Park - Diversão Garantida</h5>
-                    <p class="card-text">Compre ingressos para o Beach Park com descontos exclusivos e aproveite um dia inesquecível.</p>
+                    <h5 class="card-title">Beach Park - Diversão Garantida 40% OFF</h5>
+                    <p class="card-text">Compre ingressos para o Beach Park com descontos exclusivos de até 40%, aproveite um dia inesquecível.</p>
                     <a href="https://www.beachpark.com.br/" target="_blank" class="btn btn-primary">Aproveitar</a>
                 </div>
             </div>

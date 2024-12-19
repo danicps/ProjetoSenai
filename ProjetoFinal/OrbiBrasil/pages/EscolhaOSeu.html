@@ -1,69 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha seu Destino - Planeje sua Viagem</title>
-    <link rel="stylesheet" href="../styles/EscolhaOseu.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrbiBrasil - Explore Destinos</title>
+  <!-- Fonts e Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/EscolhaOseu.css">
 </head>
+
 <body>
-
-<header>
-    <h1>Escolha seu Destino</h1>
-    <p>Planeje sua viagem pelo Brasil de forma prática e personalizada</p>
-</header>
-
-<div class="container">
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../images/Logo.png" alt="OrbiBrasil" class="logo">
+      <span style="font-size: 1.8rem; font-family: 'Playfair Display', serif;">OrbiBrasil</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Destinos.html">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="EscolhaOSeu.html">Escolha o Seu Destino</a></li>
+          <li class="nav-item"><a class="nav-link" href="Promocoes.html">Promoções</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Planeje Sua Viagem dos Sonhos</h1>
     <form id="travelForm">
-        <h2>Detalhes da Viagem</h2>
-        
-        <!-- Destino -->
-        <label for="destination">Destino</label>
-        <select id="destination" name="destination">
-            <option value="jalapao">Jalapão</option>
-            <option value="bonito">Bonito</option>
-            <option value="canela">Canela</option>
-            <option value="foz-do-iguacu">Foz do Iguaçu</option>
-            <option value="porto-de-galinhas">Porto de Galinhas</option>
-            <option value="jericoacoara">Jericoacoara</option>
-            <option value="campos-do-jordao">Campos do Jordão</option>
-            <option value="lencois-maranhenses">Lençóis Maranhenses</option>
-            <option value="sao-miguel-dos-milagres">São Miguel dos Milagres</option>
-            <option value="fernando-de-noronha">Fernando de Noronha</option>
+        <label for="travelDate">Data da Viagem:</label>
+        <input type="date" id="travelDate" required>
+
+       
+        <label for="budget">Orçamento Disponível (R$):</label>
+        <input type="number" id="budget" placeholder="Ex.: 5000" required>
+
+        <label for="season">Estação do Ano:</label>
+        <select id="season" required>
+            <option value="Verão">Verão</option>
+            <option value="Outono">Outono</option>
+            <option value="Inverno">Inverno</option>
+            <option value="Primavera">Primavera</option>
         </select>
 
-        <!-- Orçamento -->
-        <label for="budget">Orçamento (R$)</label>
-        <input type="number" id="budget" name="budget" placeholder="Ex: 3000">
+        <div class="mb-3"> <label for="hotelSort" class="form-label">Opções de Hotel</label>
+             <select id="hotelSort" name="hotelSort" class="form-select"> 
+                <option value="Barreiras Hotel">Hotel Econômico ✌️</option> 
+                <option value="luxury-hotel">Hotel de Luxo 😜</option>
+                 <option value="Privê Hotel">Hotel Intermediário 😊</option> 
+                 <option value="Airbnb">Airbnb 😘</option> 
+                 <option value="Casa">Casa de Alguém que conheço 👌</option> 
+                </select> 
+            </div>
 
-        <!-- Data -->
-        <label for="travelDate">Data da Viagem</label>
-        <input type="date" id="travelDate" name="travelDate">
-
-        <!-- Opção de hotéis -->
-        <label for="hotelSort">Ordenação de Hotéis</label>
-        <select id="hotelSort" name="hotelSort">
-            <option value="cheap-to-expensive">Mais baratos para mais caros</option>
-            <option value="expensive-to-cheap">Mais caros para mais baratos</option>
+        <label for="destination">Destino:</label>
+        <select id="destination" required>
+            <option value="Jalapão">Jalapão</option>
+            <option value="Bonito">Bonito</option>
+            <option value="Canela">Canela</option>
+            <option value="Foz do Iguaçu">Foz do Iguaçu</option>
+            <option value="Porto de Galinhas">Porto de Galinhas</option>
+            <option value="Jericoacoara">Jericoacoara</option>
+            <option value="Campos do Jordão">Campos do Jordão</option>
+            <option value="Lençóis Maranhenses">Lençóis Maranhenses</option>
+            <option value="São Miguel dos Milagres">São Miguel dos Milagres</option>
+            <option value="Fernando de Noronha">Fernando de Noronha</option>
         </select>
 
-        <button type="submit">Planejar Viagem</button>
+        <button type="button" id="finalizePlan">Finalizar Planejamento</button>
+        <a href="Promocoes.html" target="_blank" class="btn btn-primary">Quero Viajar!</a>
     </form>
 
-    <!-- Resultados -->
-    <div id="results" class="results" style="display: none;">
-        <h2>Resumo do Planejamento</h2>
-        <p><strong>Destino:</strong> <span id="resultDestination"></span></p>
-        <p><strong>Orçamento:</strong> R$ <span id="resultBudget"></span></p>
-        <p><strong>Data da Viagem:</strong> <span id="resultDate"></span></p>
-        <p><strong>Ordenação de Hotéis:</strong> <span id="resultHotelSort"></span></p>
-        <p><strong>Locais Indispensáveis:</strong></p>
-        <ul id="resultMustVisit"></ul>
-        <p><strong>Previsão do Tempo:</strong> <span id="resultWeather"></span></p>
-        <p><strong>Valor Estimado Total:</strong> R$ <span id="resultTotalCost"></span></p>
-    </div>
+    <div id="summary" class="summary" style="display: none;"></div>
 </div>
+  
+  <footer class="py-4 text-center text-white" id="footer">
+    <p class="mb-0">&copy; 2024 OrbiBrasil. Todos os direitos reservados.</p>
+  </footer>
 
-<script src="../scripts/EscolhaOSeu.js"></script>
+  <script src="../scripts/EscolhaOSeu.js"></script>
 </body>
+
 </html>

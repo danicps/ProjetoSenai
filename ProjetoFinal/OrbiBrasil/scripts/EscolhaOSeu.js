@@ -1,76 +1,57 @@
-const mustVisitPlaces = {
-  "jalapao": ["Fervedouros", "Cachoeira do Formiga", "Dunas do Jalapão"],
-  "bonito": ["Gruta do Lago Azul", "Rio da Prata", "Balneário Municipal"],
-  "canela": ["Catedral de Pedra", "Parque do Caracol", "Mundo a Vapor"],
-  "foz-do-iguacu": ["Cataratas do Iguaçu", "Parque das Aves", "Itaipu Binacional"],
-  "porto-de-galinhas": ["Piscinas Naturais", "Praia dos Carneiros", "Pontal de Maracaípe"],
-  "jericoacoara": ["Pedra Furada", "Lagoa do Paraíso", "Duna do Pôr do Sol"],
-  "campos-do-jordao": ["Morro do Elefante", "Amantikir", "Palácio Boa Vista"],
-  "lencois-maranhenses": ["Lagoa Azul", "Lagoa Bonita", "Rio Preguiças"],
-  "sao-miguel-dos-milagres": ["Praia do Toque", "Praia de São Miguel dos Milagres", "Piscinas Naturais"],
-  "fernando-de-noronha": ["Baía do Sancho", "Baía dos Porcos", "Praia do Leão"]
-};
+document.getElementById('finalizePlan').addEventListener('click', () => {
+  const travelDate = document.getElementById('travelDate').value;
+  const budget = parseFloat(document.getElementById('budget').value);
+  const season = document.getElementById('season').value;
+  const hotel = document.getElementById('hotelSort').value;
+  const destination = document.getElementById('destination').value;
 
-const form = document.getElementById('travelForm');
-const results = document.getElementById('results');
+  if (!travelDate || !budget || !season || !hotel || !destination) {
+      alert('Por favor, preencha todos os campos!');
+      return;
+  }
 
-form.addEventListener('submit', async function (event) {
-  event.preventDefault();
-
-  const destination = form.destination.value;
-  const budget = form.budget.value;
-  const travelDate = form.travelDate.value;
-  const hotelSort = form.hotelSort.value;
-
-  // Locais indispensáveis
-  const mustVisitList = mustVisitPlaces[destination];
-  const mustVisitElement = document.getElementById('resultMustVisit');
-  mustVisitElement.innerHTML = "";
-  mustVisitList.forEach(place => {
-    const li = document.createElement('li');
-    li.textContent = place;
-    mustVisitElement.appendChild(li);
-  });
-
-  // Integração com OpenWeatherMap
-  const weather = await fetchWeather(destination);
-
-  // Cálculo de custo total estimado
-  const totalCost = (budget * 0.9).toFixed(2);
-
-  // Preenchendo os resultados
-  document.getElementById('resultDestination').innerText = destination;
-  document.getElementById('resultBudget').innerText = budget;
-  document.getElementById('resultDate').innerText = travelDate;
-  document.getElementById('resultHotelSort').innerText = hotelSort === "cheap-to-expensive" ? "Mais baratos para mais caros" : "Mais caros para mais baratos";
-  document.getElementById('resultWeather').innerText = weather || "Não foi possível obter a previsão do tempo.";
-  document.getElementById('resultTotalCost').innerText = totalCost;
-
-  // Exibindo os resultados
-  results.style.display = 'block';
-});
-
-async function fetchWeather(destination) {
-  const apiKey = ""; // Substitua pela sua chave da API OpenWeatherMap
-  const cities = {
-    "jalapao": "Palmas",
-    "bonito": "Bonito",
-    "canela": "Canela",
-    "foz-do-iguacu": "Foz do Iguaçu",
-    "porto-de-galinhas": "Ipojuca",
-    "jericoacoara": "Jijoca de Jericoacoara",
-    "campos-do-jordao": "Campos do Jordão",
-    "lencois-maranhenses": "Barreirinhas",
-    "sao-miguel-dos-milagres": "São Miguel dos Milagres",
-    "fernando-de-noronha": "Fernando de Noronha"
+  const estimatedCosts = {
+      "Jalapão": 3000,
+      "Bonito": 4000,
+      "Canela": 2500,
+      "Foz do Iguaçu": 3500,
+      "Porto de Galinhas": 4500,
+      "Jericoacoara": 5000,
+      "Campos do Jordão": 2800,
+      "Lençóis Maranhenses": 3800,
+      "São Miguel dos Milagres": 4200,
+      "Fernando de Noronha": 7000
   };
-}
 
-const city = cities[destination];
-try {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${apiKey}&units=metric`);
-  const data = response.json();
-  return `Temperatura: ${data.main.temp}°C, Condição: ${data.weather[0].description}`;
-} catch (error) {
-  console.error('Erro ao buscar dados do clima:', error);
-}
+  const localTips = {
+      "Jalapão": "Explore as dunas e cachoeiras do Parque Estadual do Jalapão.",
+      "Bonito": "Não perca o passeio pela Gruta do Lago Azul.",
+      "Canela": "Visite a famosa Catedral de Pedra e o Parque do Caracol.",
+      "Foz do Iguaçu": "As Cataratas do Iguaçu são imperdíveis!",
+      "Porto de Galinhas": "Passeio de jangada pelas piscinas naturais é obrigatório.",
+      "Jericoacoara": "Aprecie o pôr do sol na Duna do Pôr do Sol.",
+      "Campos do Jordão": "Passeie pelo Horto Florestal e aprecie o chocolate local.",
+      "Lençóis Maranhenses": "Explore as lagoas cristalinas como Lagoa Azul e Lagoa Bonita.",
+      "São Miguel dos Milagres": "Mergulhe nas piscinas naturais durante a maré baixa.",
+      "Fernando de Noronha": "A Baía do Sancho é um dos melhores pontos para snorkeling."
+  };
+
+  const totalCost = estimatedCosts[destination] || 0;
+
+  const summary = `
+      <h2>Resumo do Planejamento</h2>
+      <p><strong>Data da Viagem:</strong> ${travelDate}</p>
+      <p><strong>Orçamento Disponível:</strong> R$ ${budget.toFixed(2)}</p>
+      <p><strong>Destino Escolhido:</strong> ${destination}</p>
+      <p><strong>Estação do Ano:</strong> ${season}</p>
+      <p><strong>Opção de Hospedagem:</strong> ${hotel}</p>
+      <p><strong>Orçamento Estimado:</strong> R$ ${totalCost.toFixed(2)}</p>
+      <p><strong>Dica Local:</strong> ${localTips[destination]}</p>
+  `;
+
+  const summaryDiv = document.getElementById('summary');
+  summaryDiv.innerHTML = summary;
+  summaryDiv.style.display = 'block';
+
+  alert('Obrigada por planejar com a gente!');
+});
