@@ -7,7 +7,7 @@
 - Danielle Rodrigues Campos.
 
 ## ✔OBJETIVO
-Na OrbiBrasil o principal obejtivo é auxiliar os usuários a planejarem sua viagens com confiança e descontos exclusivos.Conta com parcerias de diversas marcas, ao planejar sua viagem com a Orbi você ganhar cupons de desconto exclusivos, através de links que o site oferece, ajudamos cada um a se organizar da melhor maneira de acordo com seus orçamentos, dicas de lugares para visitar, além dos 10 lugares mais lindos para or curtir sua férias no Brasil.
+Na OrbiBrasil o principal obejtivo é auxiliar os usuários a planejarem sua viagens com confiança e descontos exclusivos. O site conta com parcerias de diversas marcas mais famosas. Ao planejar sua viagem com a Orbi você ganha cupons de desconto exclusivos e através de links que o site oferece, ajudamos cada um a se organizar da melhor maneira de acordo com seus orçamentos. Oferecemos dicas de lugares para visitar, além dos 10 lugares mais lindos para curtir suas férias no Brasil.
 
 ## 📆PRAZO
 
@@ -21,7 +21,7 @@ Na OrbiBrasil o principal obejtivo é auxiliar os usuários a planejarem sua via
 
 ## 🌟PÚBLICO ALVO
 
-A OrbiBrasil tem como clientes, pessoas que estão em busca de uma viagem perfeita! Organizada e com descontos exclusivos.
+A OrbiBrasil, tem como clientes, pessoas que estão em busca de uma viagem perfeita! Organizada e com descontos exclusivos.
 
 ## 📄PÁGINAS A SEREM EXECUTADAS
 
